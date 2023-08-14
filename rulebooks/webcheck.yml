@@ -22,7 +22,9 @@
 
   rules:
     - name: "Alert if URL is down (call AAP controller)"
-      condition: event.url_check.status == "down"
+      condition:
+        any:
+          - event.url_check.status == "down"
       throttle:
         once_within: 5 minutes
         group_by_attributes:
