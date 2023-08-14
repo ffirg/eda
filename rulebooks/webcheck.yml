@@ -34,4 +34,4 @@
           job_args:
             extra_vars:
               foo: bar
-              website: '{{ ansible_eda.event.url_check.url }}'
+              website: '{{ event.url_check.url }}'
