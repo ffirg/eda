@@ -30,3 +30,7 @@
         run_job_template:
           name: "Demo Job Template"
           organization: "Default"
+          # Need JT prompt-on-launch for the below to work!
+          job_args:
+            extra_vars:
+              website: "{{event.url}}"
