@@ -9,6 +9,7 @@
         delay: 30 # seconds
         urls:
           - https://status.redhat.com
+          - https://www.anothercrapwsite.co.uk
           - http://loadofrubbishurl.com
 #
 # How to easily debug output (to get event metadata for instance)
@@ -33,5 +34,4 @@
           # Need JT prompt-on-launch for the below to work!
           job_args:
             extra_vars:
-              foo: bar
               website: '{{ event.url_check.url }}'
