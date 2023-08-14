@@ -8,7 +8,7 @@
         verify_ssl: false
         delay: 30 # seconds
         urls:
-          - https://status.redhat.com:wq
+          - https://status.redhat.com
           - http://loadofrubbishurl.com
 #
 # How to easily debug output (to get event metadata for instance)
