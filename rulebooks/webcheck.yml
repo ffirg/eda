@@ -33,4 +33,5 @@
           # Need JT prompt-on-launch for the below to work!
           job_args:
             extra_vars:
-              website: "{{ ansible_eda.event }}"
+              foo: bar
+              #website: '{{ ansible_eda.event.url_check.status }}'
