@@ -11,7 +11,7 @@
           - https://status.redhat.com:wq
           - http://loadofrubbishurl.com
 #
-# How to easily debug output (to metadata for instance)
+# How to easily debug output (to get event metadata for instance)
 #
 #  rules:
 #    - name: Debug output
@@ -19,6 +19,7 @@
 #      action:
 #        debug:
 
+  rules:
     - name: "Alert if URL is down (call AAP controller)"
       condition: event.url_check.status == "down"
       throttle:
