@@ -28,7 +28,7 @@
       throttle:
         once_within: 5 minutes
         group_by_attributes:
-          - event.url_check.url
+          - event.url_check.urls
       action:
         run_job_template:
           name: "Demo Job Template"
