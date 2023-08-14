@@ -10,20 +10,22 @@
         urls:
           - https://status.redhat.com:wq
           - http://loadofrubbishurl.com
-
-  rules:
-    - name: Debug output
-      condition: event.url_check.status == "down"
-      action:
-        debug:
-
-#    - name: "Alert if URL is down (call AAP controller)"
+#
+# How to easily debug output (to metadata for instance)
+#
+#  rules:
+#    - name: Debug output
 #      condition: event.url_check.status == "down"
-#      throttle:
-#        once_within: 5 minutes
-#        group_by_attributes:
-#          - event.meta.urls
 #      action:
-#        run_job_template:
-#          name: "Demo Job Template"
-#          organization: "Default"
+#        debug:
+
+    - name: "Alert if URL is down (call AAP controller)"
+      condition: event.url_check.status == "down"
+      throttle:
+        once_within: 5 minutes
+        group_by_attributes:
+          - event.meta.url_check.urls
+      action:
+        run_job_template:
+          name: "Demo Job Template"
+          organization: "Default"
