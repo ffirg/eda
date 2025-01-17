@@ -37,3 +37,4 @@
           job_args:
             extra_vars:
               website: '{{ event.url_check.url }}'
+              source: eda
